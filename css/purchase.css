@@ -1,0 +1,262 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+}
+
+h2 {
+    text-align: center;
+    margin-top: 20px;
+    color: #333;
+}
+
+/* Wishlist Table */
+table {
+    margin: 20px auto;
+    border-collapse: collapse;
+    width: 90%;
+    max-width: 1000px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid #e6e2e2;
+}
+
+thead {
+    background-color: #4CAF50;
+    color: #ffffff;
+}
+
+thead th {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+tbody tr {
+    border: 1px solid #ddd;
+    transition: background-color 0.3s;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tbody tr:hover {
+    background-color: #ddd;
+}
+
+td, th {
+    padding: 12px;
+    text-align: left;
+   
+}
+
+td {
+    color: #555;
+    border: 1px solid #1b0f0f;
+}
+
+/* Product Image */
+td img {
+    width: 100px; /* Fixed width */
+    height: 100px; /* Fixed height */
+    object-fit: cover; /* Ensure the image is cropped and fits within the size */
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out;
+}
+
+td img:hover {
+    transform: scale(1.1);
+}
+
+/* Cart Heading */
+.cart-heading {
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+    color: #343a40; /* Dark gray for a modern look */
+    text-transform: uppercase;
+    margin: 20px 0;
+    padding: 10px;
+    border-bottom: 3px solid #28a745; /* Green underline effect */
+    display: inline-block;
+}
+
+/* Buttons */
+.btn {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+.newbtn {
+    background-color: #28a745;
+    color: white;
+    padding: 8px 12px; /* Reduced button size */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+    display: inline-block;
+    font-size: 14px;
+}
+
+.newbtn:hover {
+    background-color: #218838;
+    transform: translateY(-2px);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Remove Button */
+.btn.remove {
+    background-color: #dc3545;
+}
+
+.btn.remove:hover {
+    background-color: #c82333;
+}
+
+/* Continue Shopping Button */
+.continue-shopping {
+    display: block;
+    background-color: #007bff;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+    width: fit-content;
+    margin: 20px auto;
+}
+
+.continue-shopping:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+/* Empty Wishlist Message */
+.empty-cart-container {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.empty-cart {
+    font-size: 24px;
+    font-weight: bold;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 425px) {
+    table {
+        width: 95%;
+    }
+
+    thead {
+        display: none;
+    }
+
+    tr {
+        display: block;
+        margin-bottom: 10px;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        padding: 15px;
+    }
+
+    td {
+        display: block;
+        text-align: right;
+        padding-left: 50%;
+        position: relative;
+        padding: 10px;
+        
+        font-size: 14px;
+    }
+
+    td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 10px;
+        text-align: left;
+        font-weight: bold;
+        
+    }
+
+    /* Buttons */
+    .btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    .continue-shopping {
+        width: 90%;
+        text-align: center;
+    }
+}
+/* Filter Buttons */
+.filter-buttons {
+    margin-left : 250px;
+    margin-right : 250px;
+    display: flex;
+    justify-content: center; /* Center the buttons as a group */
+    align-items: center;
+    gap: 20px; /* Space between buttons */
+    margin-bottom: 20px;
+}
+
+.filter-btn {
+    padding: 10px 30px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.filter-btn:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+
+/* Active Button State */
+.filter-btn.active {
+    background-color: #28a745;
+}
+
+/* Responsive Design for Filter Buttons */
+@media screen and (max-width: 425px) {
+    .filter-buttons {
+        gap: 10px;
+        justify-content: space-evenly; /* Ensure equal spacing on smaller screens */
+    }
+
+    .filter-btn {
+        padding: 10px 20px;
+        width: auto;
+    }
+}

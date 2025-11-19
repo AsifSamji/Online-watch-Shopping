@@ -1,0 +1,178 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('../api/images/lg.AVIF');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100vh;
+    padding-left: 8%;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.container {
+    width: 100%;
+    max-width: 450px; /* Increased width */
+    background-color: rgba(255, 255, 255, 0.15);
+    padding: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    animation: slideIn 1s ease-in-out;
+    backdrop-filter: blur(12px);
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 10px;
+    color: #fff;
+    font-size: 22px;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+label {
+    display: block;
+    margin-bottom: 4px;
+    font-weight: bold;
+    color: #fff;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="tel"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 14px;
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    transition: all 0.3s ease-in-out;
+}
+
+input:focus, textarea:focus {
+    border-color: #80bdff;
+    outline: none;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.7);
+    transform: scale(1.03);
+}
+
+input[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(45deg, #28a745, #218838);
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+input[type="submit"]:hover {
+    background: linear-gradient(45deg, #218838, #1e7e34);
+    box-shadow: 0 5px 15px rgba(33, 136, 56, 0.4);
+}
+a {
+    display: block;
+    margin-top: 12px;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #1e7e34;
+    text-decoration: underline;
+}
+
+/* RESPONSIVE DESIGN */
+
+/* For tablets (less than 1024px width) */
+@media (max-width: 1024px) {
+    body {
+        padding-left: 5%;
+    }
+    .container {
+        max-width: 400px; /* Slightly reduced size */
+    }
+}
+
+/* For mobile devices (less than 768px width) */
+@media (max-width: 768px) {
+    body {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding-left: 0;
+    }
+    .container {
+        width: 90%; /* Make it more responsive */
+        max-width: 350px; /* Reduce size for smaller screens */
+        padding: 15px;
+    }
+    h2 {
+        font-size: 20px;
+    }
+    input, textarea {
+        font-size: 14px;
+        padding: 8px;
+    }
+    input[type="submit"] {
+        font-size: 15px;
+    }
+}
+
+/* For very small screens (less than 480px width) */
+@media (max-width: 480px) {
+    .container {
+        width: 95%;
+        max-width: 320px;
+    }
+    h2 {
+        font-size: 18px;
+    }
+    input[type="submit"] {
+        padding: 10px;
+        font-size: 14px;
+    }
+}

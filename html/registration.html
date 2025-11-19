@@ -1,0 +1,41 @@
+<html>
+<head><meta charset="utf-8">
+
+       <link rel="stylesheet" href="../css/registerstyle.css">
+
+</head>
+    <div class="container">
+        <h2>Register</h2>
+        <form action="../api/register.php" method="POST">
+            <label>First Name:</label>
+            <input type="text" id="firstName" name="firstName" required><br>
+            
+            <label>Last Name:</label>
+            <input type="text" id="lastName" name="lastName" required><br>
+            
+            <label>Address:</label>
+            <textarea id="address" name="address" cols="30" rows="5" required></textarea><br>
+
+            <label>Email:</label>
+            <input type="email" id="email" name="email" required><br>
+            
+            <label>Contact:</label>
+            <input type="tel" id="number" name="number" pattern="[0-9]{10}" required><br>
+
+            <label>Password:</label>
+            <input type="password" id="password" name="password" required><br>
+
+            <label>Confirm Password:</label>
+            <input type="password" id="cpassword" name="cpassword" required><br>
+            
+            
+            <input type="submit" value="Register" name="rg">
+            
+            <a href="login.html">Already i have Account</a>
+
+        </form>
+    </div>
+    <script src="../javascript/register.js"></script>
+</body>
+
+</html>
